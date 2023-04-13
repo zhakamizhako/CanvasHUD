@@ -1,18 +1,21 @@
 # Zhakami Zhako's Gauge Script / Canvas HUD System
-#### For use with SaccFlight; Not to be redistributed.
+#### For use with SaccFlight; For internal Saccflight, BLACK ACES staff, 425th VTFTW, YURU YURU AVIATION members, UHR and selected individuals only. 
+#### Not to be redistributed unless permitted.
 #### Discord: ZhakamiZhako#2147 | Twitter: [@ZZhako](https://twitter.com/ZZhako/) | zhintamizhakami@gmail.com
 
 
 ## Introduction
 
-Sacchan's Flight and Vehicles (SaccFlight) is an amazing system when it comes to creating Aircraft, Boats and Vehicles in VRChat and yet lacks an easier way in order to create your own custom instruments.
+Sacchan's Flight and Vehicles (SaccFlight) is an amazing system when it comes to creating Aircraft, Boats and Vehicles in VRChat and yet lacks an easier way in order to create your own custom instruments or HUD.
 
-This system aims to solve a problem where people cannot effectively create their own instruments / HUD / Effects via Animations, Animation parameters, Animation layers and Text Elements.
+This system aims to allow people to create their projected instruments / HUD / Effects via Animations, Animation parameters, Animation layers and Text Elements.
 
 
 ## The Script Explained
 
-Here's a comprehensive list of possible value readouts that the CanvasHUD may be able to create
+The script works in a way where it takes certain values of the aircraft's state; Altitude, Speed, etc.
+
+Reference:
 
 ### Animations
 
@@ -46,16 +49,21 @@ Here's a comprehensive list of possible value readouts that the CanvasHUD may be
 
 ### Text
 
-|Function|Description|
-|---|---|
-|RPM|Aircraft's RPM / Current Engine output. Can be customized with Min RPM, Max RPM. Engine off will lerp back to 0.|
-|Temperature|Aircraft's 'Virtual' Temperature output. Responsive according to RPM. Can be customized with Min Temp, Max Temp. Engine off will lerp back to 0.|
+|Function|Description|Parameters
+|---|---|---|
+|RPM|Aircraft's RPM / Current Engine output. Can be customized with Min RPM, Max RPM. Engine off will lerp back to 0.|Min RPM, Max RPM as mapped values
+|Temperature|Aircraft's 'Virtual' Temperature output. Responsive according to RPM. Can be customized with Min Temp, Max Temp. Engine off will lerp back to 0.|Min Temp, Max Temp as mapped values
 |Gs|Aircraft's G's readout. Can be useful for debugging|
-|Altimeter|Aircraft's Altimeter readout. Can be useful for debugging. Can be customized with Altimeter Divisor. |
-|Speedometer|Aircraft's Speed readout. Can be customized with Speed Divider|
-|Fuel|Aircraft's Fuel readout. Can be customized with Min Fuel and Max Fuel.|
-|Gun Text| Gun Ammo readout in bullets. Requires to have DFUNC_GUN(s) assigned. Can be customized with Min ammo, Max Ammo. |
+|Altimeter|Aircraft's Altimeter readout. Can be useful for debugging. Can be customized with Altimeter Divisor. |3 Dividers
+|Speedometer|Aircraft's Speed readout. Can be customized with Speed Divider| 3 Dividers
+|Fuel|Aircraft's Fuel readout. Can be customized with Min Fuel and Max Fuel.| Min Fuel, Max Fuel as mapped values
+|Gun Text| Gun Ammo readout in bullets. Requires to have DFUNC_GUN(s) assigned. Can be customized with Min ammo, Max Ammo. |Min Ammo, Max Ammo as mapped values
 |Heading| Aircraft's absolute rotation in Y Axis readout. Returns 00X, 0XX, or XXX.|
-|Rate of Climb in Seconds| Aircraft's Rate of climb in text.
+|Rate of Climb in Seconds| Aircraft's Rate of climb in text.|
 
 
+### Inspector Properties
+|Variable Name|Required?|Description
+|---|---|---|
+|Engine Control|Y|The Aircraft's Sacc Air vehicle Object|
+|DFUNC_Guns||
