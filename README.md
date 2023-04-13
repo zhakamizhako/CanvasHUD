@@ -39,12 +39,23 @@ Here's a comprehensive list of possible value readouts that the CanvasHUD may be
 | Rotational Velocity Indicator X| Aircraft's rotational Velocity Indicator based on it's local X Axis.                           | 1 | |Minimum, 0, Maximum  ||0, 0.5, 1|
 | Rotational Velocity Indicator Y| Aircraft's rotational Velocity Indicator based on it's local Y Axis.                           | 1 | |Minimum, 0, Maximum  ||0, 0.5, 1|
 | Rotational Velocity Indicator Z| Aircraft's rotational Velocity Indicator based on it's local Z Axis.                           | 1 | |Minimum, 0, Maximum  ||0, 0.5, 1|
-
+| Pull Up| Indicator if the aircraft has reached a lower altitude limit without the landing gears down | 1 | | True, False | | 
+| Rate of Climb | Aircraft's climb rate in seconds | 1 | | Minimum, 0, Maximum |No | 0, 0.5, 1
 
 
 
 ### Text
 
-|Function|Description|Parameters|
-|---|---|---|
-|RPM|Aircraft's RPM / Current Engine output|
+|Function|Description|
+|---|---|
+|RPM|Aircraft's RPM / Current Engine output. Can be customized with Min RPM, Max RPM. Engine off will lerp back to 0.|
+|Temperature|Aircraft's 'Virtual' Temperature output. Responsive according to RPM. Can be customized with Min Temp, Max Temp. Engine off will lerp back to 0.|
+|Gs|Aircraft's G's readout. Can be useful for debugging|
+|Altimeter|Aircraft's Altimeter readout. Can be useful for debugging. Can be customized with Altimeter Divisor. |
+|Speedometer|Aircraft's Speed readout. Can be customized with Speed Divider|
+|Fuel|Aircraft's Fuel readout. Can be customized with Min Fuel and Max Fuel.|
+|Gun Text| Gun Ammo readout in bullets. Requires to have DFUNC_GUN(s) assigned. Can be customized with Min ammo, Max Ammo. |
+|Heading| Aircraft's absolute rotation in Y Axis readout. Returns 00X, 0XX, or XXX.|
+|Rate of Climb in Seconds| Aircraft's Rate of climb in text.
+
+
