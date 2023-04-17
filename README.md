@@ -2,6 +2,8 @@
 #### For use with SaccFlight; For internal Saccflight, BLACK ACES staff, 425th VTFTW, YURU YURU AVIATION members, UHR and selected individuals only. 
 #### Not to be redistributed unless permitted.
 #### Discord: ZhakamiZhako#2147 | Twitter: [@ZZhako](https://twitter.com/ZZhako/) | zhintamizhakami@gmail.com
+#### Documentation is still in progress.
+#### Tutorial is still being made.
 
 
 ## Introduction
@@ -14,11 +16,15 @@ This system aims to allow people to create their projected instruments / HUD / E
 ## The Script Explained
 
 The script works in a way where it takes certain values of the aircraft's state; Altitude, Speed, etc.
+Any parameters that are empty will be ignored by the script; However... If you have animators without these parameters, you might want to either create these parameters or leave them empty; as Unity attempts to 'input' these values but will error out in the logs due to parameters missing from the said animators.
+
 
 Reference:
 
 ### Animations
 
+Typically, the way you would animate your gadgets/hud element/instrument is basically animating them from the 0 value, up to the maximum value in order for this to work.
+CanvasHUD/GaugeScript takes the values from the SaccAirVehicle components and translates these to a normalized parameter from 0~1f. 
 
 | Function          |Description| No. of Parameters |No. of dividers|Animation|Looped?|Parameter Range|
 |--|--|--|--|--|--|--|
