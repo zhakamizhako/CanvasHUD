@@ -153,6 +153,7 @@ This section will explain on how the script converts parameters from the vehicle
 ### Attitude / Artificial Horizon Indicator
 
 Suppose that you already have a model / canvas that indicates where the aircraft is facing at, you may have to create two empties before the mesh itself; One that represents Roll, and one that represents pitch.
+
 ![image](https://user-images.githubusercontent.com/19369963/234722827-15175562-7067-4658-997c-df17e186a73f.png)
 
 
