@@ -73,3 +73,28 @@ CanvasHUD/GaugeScript takes the values from the SaccAirVehicle components and tr
 |---|---|---|
 |Engine Control|Y|The Aircraft's Sacc Air vehicle Object|
 |DFUNC_Guns||
+
+
+
+## CanvasHUD to Instruments / Elements
+This section will explain on how the script converts parameters from the vehicle to animation controller to animation.
+
+
+### Attitude / Artificial Horizon Indicator
+
+Suppose that you already have a model / canvas that indicates where the aircraft is facing at, you may have to create two empties before the mesh itself; One that represents Roll, and one that represents pitch.
+#Insert Photo of hierarchy
+
+
+Let's focus on the pitching. Make an animation that represents the aircraft when facing -90 degrees down, level, then 90 degrees up.
+#Insert photo of animation.
+
+Once done, go to your Animation Controller. Create the parameter that represents your pitching parameter as a float. If the layer does not exist, create a layer that represents your aircraft's pitch for the instrument/HUD.
+#Insert photo
+
+In your Layer, insert the animation. Set the animation's Motion time to the parameter you have created that represents the pitch. 
+#Insert photo for layer, animation, motion time.
+
+In the CanvasHUD script, set the Pitch parameter. Set the animation controller as well if not assigned.
+
+#Insert Photo of inspector.
