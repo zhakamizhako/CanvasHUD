@@ -23,8 +23,8 @@ Reference:
 
 ### Animations
 
-Typically, the way you would animate your gadgets/hud element/instrument is basically animating them from the 0 value, up to the maximum value in order for this to work.
-CanvasHUD/GaugeScript takes the values from the SaccAirVehicle components and translates these to a normalized parameter from 0~1f. 
+Typically, the way you would animate your gadgets/hud element/instrument is basically animating them from the 0 value, up to the maximum value in order for this to work. 
+CanvasHUD/GaugeScript takes the values from the SaccAirVehicle components and translates these to a normalized parameter from 0~1f (Where 0 is the first frame of the animation, .5 is the middle of the animation, 1 is the final frame of the animation)
 
 | Function          |Description| No. of Parameters |No. of dividers|Animation|Looped?|Parameter Range|
 |--|--|--|--|--|--|--|
@@ -72,8 +72,78 @@ CanvasHUD/GaugeScript takes the values from the SaccAirVehicle components and tr
 |Variable Name|Required?|Description
 |---|---|---|
 |Engine Control|Y|The Aircraft's Sacc Air vehicle Object|
-|DFUNC_Guns||
-
+|DFUNC_Guns||Gun DFUNC's of the vehicle. You may add as many as you like; However, **GunText, Min Ammo and Max ammo** will be dependent on DFUNC_Guns's array order and length. E.g. DFUNC_Gun[0] are the 30mms, GunText[0] will represent 30mms value, MinAmmo[0] is the mininum gun amount for DFUNC_GUN[0], as well as MaxAmmo[0]; as DFUNC_Gun[1] represents another gun, as to GunText[1], MinAmmo[1], MaxAmmo[1]... etc.|
+|Gun Text||Gun Text representative of each array entry. Will output the mapped value of the gun ammo.
+Min Ammo||Min Gun ammo representative of each array entry. Unless for any other purposes, it should remain as 0.
+Max Ammo ||Maximum Gun ammo representative of each array entry. Will represent the maximum loadout of the specific DFUNC_GUN.
+|Altimeter Text||Array of Texts representative of the Altimeter. You may provide as many text objects as needed.
+Show Altimeter Unit| | When enabled, each altimeter text will show a unit symbol (ft, km) 
+Radar Altimeter Text||Array of texts representative of the Radar Altimeter. You may provide as many text objects as needed.
+|Show Radar Altimeter Unit||When enabled, each radar altimeter text will show a unit symbol (ft, km)
+Hide if Out of range ||Sets the text output of the radar altimeter texts to an empty string when the aircraft is out of the radar altimeter's range.
+|Rate of Climb Seconds||Array of texts that represents the rate of climb in seconds. 
+Show rate of climb unit||When enabled, shows unit symbol (ft/s, km/s)
+Speedometer Text||Array of texts representative of the speedometer.
+Show Speedometer unit||When enabled, shows unit symbol (kt, km)
+Fuel Text||Array of texts representative of the mapped values of fuel. Setting up variables of **Fuel Lower Limit, Fuel upper limit** is required.
+RPM Text||Array of texts representative of the aircraft's RPM. Setting up **RPM Lower**, **RPM Max** is required.
+Fuel Consumption Text||Array of texts representative of the fuel consumption per second. **Fuel Consumption Multiplier** may need to be set first.
+Temperature Text||Array of texts representative of the mapped values of temperature; This is **NOT** actual temperature, and is tied to the vehicle's RPM. Variables **Temp Lower** and **Temp Max** may be needed to be assigned.
+Rotation Text Debug||When assigned, it will output the vehicle's rotational axis via X, Y, Z output to the text object.
+Gs Text||Output's G's.
+Heading Text||Outputs the Y Rotation of the vehicle relative to the world space of the vehicle. Offset is applied by the Y axis of the **Offsets** variable.
+Goffset_value||Offset applied to G's. Default is 1.
+Fuel Lower Limit||Mapped value lerped to when the fuel is empty.
+Fuel Upper Limit||Mapped value lerped to when fuel is full.
+Fuel Consumption Multiplier||Fuel consumption multiplier
+**Animation Parameters**
+Altimeter 1, 2 ,3||Animation parameters to use on each animation controller representative of 1,2,3. Each may signify Altitude in Hundreds, Thousands, Tens of Thousands.
+Rate of Climb||Animation paramters to use for the rate of climb.
+**Roll**||Animation parameters representing roll angle
+**Pitch**||Animation parameters representing pitch angle
+Heading||Animation parameters representing the heading / Y rotation of the vehicle relative to world space.
+Gs||Animation parameters representing G's.
+Mach||Animation parameters representing Mach
+AOA||Animation parameters representing Angle of attack
+Radar Altimeter 1, 2||Animation Parameters representing Radar Altimeter; Each may represent Hundreds, Thousands... depending on the divisor used.
+Speedometer 1, 2, 3||Animation parameters represending the aircraft's speed. Each may represent tens, hundreds, thousands... depending on the divisor.
+Afterburner||Animation parameter representing when the aircraft enters afterburner. Uses Bool.
+Directional G's X, Y, Z, SideG||Animation parameters representing directional Gs'.
+Velocity Rotation Indicator X, Y, Z||Animation parameters representing each rotational velocity's axes.
+Velocity Indicator X, Y, Z||Animation parameters representing Velocity in X, Y, Z directions.
+Pullup_anim||Animation paramater for pull up. Bool.
+Canvas HUD Animator||Animator to use and set the parameters. You may use this if you're using only one animator.
+Canvas HUD Animators||Array of animators to use and to set the parameters. You may assign more when needed.
+**Setup**|| Each variable/value will be divided accordingly to set as a normalized value of the animator. (E.g. Maximum value of the instrument / gauge / hud.)
+Lift Divisor|| Aircraft Velocity * 60 / LiftDivisor
+Speed Divisor 1 ||Aircraft Speed / Speed Divisor 
+Speed Divisor 2 ||Aircraft Speed / Speed Divisor 2
+Speed Divisor 3 ||Aircraft Speed / Speed Divisor 3
+Radar Altimeter Divisor||Aircraft Radar Altimeter Readout / RAD1
+Radar Altimeter Divisor 2|| Aircraft Radar Altimeter Readout / RAD2
+Radar Altimeter Max Distance|| Maximum distance before the radar altimeter stops reporting altitude
+Alt Divisor 1 || Aircraft Altitude / Alt Divisor 1
+Alt Divisor 2 || Aircraft Altitude / Alt Divisor 2
+Alt Divisor 3 || Aircraft Altitude / Alt Divisor 3
+Do Metric? || Switches between using **kt/ft** to **m / km**
+Rotation Divider||  Aircraft Rotational Velocity / rotationDivider
+Velocity Divider || Aircraft Directional Velocity / Velocity Divider
+Gs3 Divider || Aircraft directional G's / GS3Divider
+ZHK_Open World Movement Logic||**Optional**. Assign OWMLScript here to adapt with the moving map's altitude.
+GDivider || Aircraft G's / GDivider
+GOffset || Aircraft G's / GDivider + GOffset
+MachDivider|| Aircraft Mach / MachDivider
+AOADivider || Aircraft AOA / AoADivider.
+AOADivider Offset || Aircraft AOA / AoADivider + AOAOffset
+RPMLower || RPM Text's Lower RPM limit. The RPM Text will lerp towards this value on Throttle 0.
+RPMMax || RPM Text's Upper RPM Limit. The RPM Text will lerp towards this value on Afterburner or Max throttle.
+TempLower || Temperature text's lower temperature limit. Temperature Text will lerp towards this value on Throttle 0.
+TempMax || Temperature text's upper temperature limit. Temp text will lerp towards this value on max throttle.
+PullUp Distance||Any altitude below this distance will result the pull_up parameter to true.
+Check Pullup||Enables the Radar Altimeter checker for the distance between your aircraft to the ground.
+Check Pullup Every||When checkpullup is enabled, it will drop a raycast from the center of mass of the aircraft to check the distance between the aircraft to the ground on every X seconds.
+RadarAltimeter Detector||Collision layer for the raycast to collide with for the radar altimeter
+Offsets||X = Pitch (Default 0.5), Y = Heading (Default is 0), Z = Roll (Default 0.5).
 
 
 ## CanvasHUD to Instruments / Elements
