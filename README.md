@@ -153,18 +153,29 @@ This section will explain on how the script converts parameters from the vehicle
 ### Attitude / Artificial Horizon Indicator
 
 Suppose that you already have a model / canvas that indicates where the aircraft is facing at, you may have to create two empties before the mesh itself; One that represents Roll, and one that represents pitch.
-#Insert Photo of hierarchy
+![image](https://user-images.githubusercontent.com/19369963/234722827-15175562-7067-4658-997c-df17e186a73f.png)
 
 
-Let's focus on the pitching. Make an animation that represents the aircraft when facing -90 degrees down, level, then 90 degrees up.
-#Insert photo of animation.
+Let's focus on the pitching. Make an animation that represents the aircraft when facing -90 degrees down, level, then 90 degrees up. In short... First keyframe of the animation must represent -90 degrees. Second keyframe should represent the level state. Then the last keyframe must be +90 degrees. The distance between keyframes must be equal, the same way as how you would animate ailerons/elevators on your aircraft; Length shouldn't matter. 
+
+![pitch](https://user-images.githubusercontent.com/19369963/234722651-87472cbe-8101-4936-be6a-cd94fc40be04.png)
+
 
 Once done, go to your Animation Controller. Create the parameter that represents your pitching parameter as a float. If the layer does not exist, create a layer that represents your aircraft's pitch for the instrument/HUD.
-#Insert photo
+
+![image](https://user-images.githubusercontent.com/19369963/234723047-0f07fd5d-6cb8-4301-9dc0-003d7f8e27c1.png)
+![image](https://user-images.githubusercontent.com/19369963/234723076-b751a0d0-cfa3-44c7-8beb-e1f5f260fed1.png)
+
+
 
 In your Layer, insert the animation. Set the animation's Motion time to the parameter you have created that represents the pitch. 
-#Insert photo for layer, animation, motion time.
+
+![image](https://user-images.githubusercontent.com/19369963/234722977-9c8fa38b-7f91-4348-a645-320dd3fca954.png)
+
 
 In the CanvasHUD script, set the Pitch parameter. Set the animation controller as well if not assigned.
 
-#Insert Photo of inspector.
+![image](https://user-images.githubusercontent.com/19369963/234723225-598e67d7-19ff-4aaf-9a98-e83d2cc755fa.png)
+![image](https://user-images.githubusercontent.com/19369963/234723400-db486a6a-afab-42b9-92c7-ae2dac2a5fa5.png)
+
+
