@@ -182,12 +182,14 @@ The end result should have the pitch animation similar to this.
 #### Rolling
 
 ![CanvasHUD - Rolling](https://user-images.githubusercontent.com/19369963/234774730-5bcfc6f5-7f7d-42f4-a8a5-52615277eff3.png)
+![ezgif-3-c153b0648d](https://user-images.githubusercontent.com/19369963/234888658-9a6bd668-986b-41a6-9bd5-0cb4a21b3daa.gif)
 
 (wip. may be wrong)
 
 #### Heading
 
-a
+![Blank diagram (2)](https://user-images.githubusercontent.com/19369963/234902665-c6a3107e-deaf-4b0e-a2a2-8a54a9dcd107.png)
+
 
 ### Speedometer
 
