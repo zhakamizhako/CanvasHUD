@@ -179,4 +179,8 @@ In the CanvasHUD script, set the Pitch parameter. Set the animation controller a
 ![image](https://user-images.githubusercontent.com/19369963/234723225-598e67d7-19ff-4aaf-9a98-e83d2cc755fa.png)
 ![image](https://user-images.githubusercontent.com/19369963/234723400-db486a6a-afab-42b9-92c7-ae2dac2a5fa5.png)
 
+The end result should have the pitch animation similar to this.
+
+![ezgif-2-f40f58ecdb](https://user-images.githubusercontent.com/19369963/234764574-7e2ca3f2-8f9d-4ff4-9104-83505e83b7dd.gif)
+
 
