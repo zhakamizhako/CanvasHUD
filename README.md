@@ -13,6 +13,8 @@ Sacchan's Flight and Vehicles (SaccFlight) is an amazing system when it comes to
 This system aims to allow people to create their projected instruments / HUD / Effects via Animations, Animation parameters, Animation layers and Text Elements.
 
 
+
+
 ## The Script Explained
 
 The script works in a way where it takes certain values of the aircraft's state; Altitude, Speed, etc.
@@ -156,6 +158,7 @@ Suppose that you already have a model / canvas that indicates where the aircraft
 
 ![image](https://user-images.githubusercontent.com/19369963/234722827-15175562-7067-4658-997c-df17e186a73f.png)
 
+#### Pitching
 
 Let's focus on the pitching. Make an animation that represents the aircraft when facing -90 degrees down, level, then 90 degrees up. In short... First keyframe of the animation must represent -90 degrees. Second keyframe should represent the level state. Then the last keyframe must be +90 degrees. The distance between keyframes must be equal, the same way as how you would animate ailerons/elevators on your aircraft; Length shouldn't matter. 
 
@@ -183,4 +186,31 @@ The end result should have the pitch animation similar to this.
 
 ![ezgif-2-f40f58ecdb](https://user-images.githubusercontent.com/19369963/234764574-7e2ca3f2-8f9d-4ff4-9104-83505e83b7dd.gif)
 
+#### Rolling
+
+a
+
+#### Heading
+
+a
+
+### Speedometer
+
+### Altimeter
+
+### Rate of Climb
+
+### Gs
+
+### Mach
+
+### AOA
+
+### Radar Altimeter
+
+#### Pull up
+
+### Velocity Indicator
+
+### Rotational Velocity Indicator
 
