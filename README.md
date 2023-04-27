@@ -125,7 +125,7 @@ CanvasHUD/GaugeScript takes the values from the SaccAirVehicle components and tr
 | Alt Divisor 1                       |           | Aircraft Altitude / Alt Divisor 1                                                                                                                                                                                                                                                                                                                                                                                 |
 | Alt Divisor 2                       |           | Aircraft Altitude / Alt Divisor 2                                                                                                                                                                                                                                                                                                                                                                                 |
 | Alt Divisor 3                       |           | Aircraft Altitude / Alt Divisor 3                                                                                                                                                                                                                                                                                                                                                                                 |
-| Do Metric?                          |           | Switches between using **kt/ft** to **m / km**                                                                                                                                                                                                                                                                                                                                                                    |
+| Do Metric?                          |           | Switches between using **kt/ft** to **m / km**                    |
 | Rotation Divider                    |           | Aircraft Rotational Velocity / rotationDivider                                                                                                                                                                                                                                                                                                                                                                    |
 | Velocity Divider                    |           | Aircraft Directional Velocity / Velocity Divider                                                                                                                                                                                                                                                                                                                                                                  |
 | Gs3 Divider                         |           | Aircraft directional G's / GS3Divider                                                                                                                                                                                                                                                                                                                                                                             |
@@ -164,6 +164,8 @@ Let's focus on the pitching. Make an animation that represents the aircraft when
 Your animation should look more like this:
 
 ![ezgif-2-54b4390996](https://user-images.githubusercontent.com/19369963/234918237-1178af15-f8ce-4b0c-9980-16579e761fa8.gif)
+ ![ezgif-4-209b9356fe](https://user-images.githubusercontent.com/19369963/234935961-0db668f4-cc6a-43ed-8345-209801bb4b51.gif)
+
 
 
 Once done, go to your Animation Controller. Create the parameter that represents your pitching parameter as a float. If the layer does not exist, create a layer that represents your aircraft's pitch for the instrument/HUD.
@@ -188,6 +190,8 @@ The end result should have the pitch animation similar to this.
 
 ![CanvasHUD - Rolling](https://user-images.githubusercontent.com/19369963/234774730-5bcfc6f5-7f7d-42f4-a8a5-52615277eff3.png)
 ![ezgif-3-c153b0648d](https://user-images.githubusercontent.com/19369963/234888658-9a6bd668-986b-41a6-9bd5-0cb4a21b3daa.gif)
+![ezgif-2-aff9075c75](https://user-images.githubusercontent.com/19369963/234942571-3b6cdf20-08f5-4edd-8dcb-7294a79a9aae.gif)
+
 
 (wip. may be wrong)
 
@@ -195,14 +199,23 @@ The end result should have the pitch animation similar to this.
 
 ![Blank diagram (2)](https://user-images.githubusercontent.com/19369963/234902665-c6a3107e-deaf-4b0e-a2a2-8a54a9dcd107.png)
 
-![ezgif-3-e673ae5def](https://user-images.githubusercontent.com/19369963/234916234-359faa34-ce15-4ae1-9dfe-2922c9cc281e.gif)
+![ezgif-3-e673ae5def](https://user-images.githubusercontent.com/19369963/234916234-359faa34-ce15-4ae1-9dfe-2922c9cc281e.gif)![ezgif-4-c6ec56b0df](https://user-images.githubusercontent.com/19369963/234927141-f030ad6e-fa55-405d-a6fb-a1eca3ba709b.gif)
+
 
 
 ### Speedometer
 
+![ezgif-2-9138ab1dca](https://user-images.githubusercontent.com/19369963/234943720-90a442d0-1b35-4952-ac71-b01d7d84461c.gif)
+
 ### Altimeter
 
+![ezgif-2-308224c832](https://user-images.githubusercontent.com/19369963/234948534-675957b2-be81-4792-aa48-84f918b04e5c.gif)
+
+
 ### Rate of Climb
+
+![ezgif-2-d5491eec07](https://user-images.githubusercontent.com/19369963/234951181-39c66e6b-3626-49c0-90df-6f881acdbc1d.gif)
+
 
 ### Gs
 
