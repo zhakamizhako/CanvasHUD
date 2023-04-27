@@ -190,6 +190,8 @@ The end result should have the pitch animation similar to this.
 
 ![Blank diagram (2)](https://user-images.githubusercontent.com/19369963/234902665-c6a3107e-deaf-4b0e-a2a2-8a54a9dcd107.png)
 
+![ezgif-3-e673ae5def](https://user-images.githubusercontent.com/19369963/234916234-359faa34-ce15-4ae1-9dfe-2922c9cc281e.gif)
+
 
 ### Speedometer
 
