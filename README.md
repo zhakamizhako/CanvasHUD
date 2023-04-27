@@ -162,7 +162,8 @@ Suppose that you already have a model / canvas that indicates where the aircraft
 
 Let's focus on the pitching. Make an animation that represents the aircraft when facing -90 degrees down, level, then 90 degrees up. In short... First keyframe of the animation must represent -90 degrees. Second keyframe should represent the level state. Then the last keyframe must be +90 degrees. The distance between keyframes must be equal, the same way as how you would animate ailerons/elevators on your aircraft; Length shouldn't matter. 
 
-![pitch](https://user-images.githubusercontent.com/19369963/234722651-87472cbe-8101-4936-be6a-cd94fc40be04.png)
+![Blank diagram (5)](https://user-images.githubusercontent.com/19369963/234766539-b0d54860-be82-4aeb-bdb3-39752b36aeee.png)
+
 
 
 Once done, go to your Animation Controller. Create the parameter that represents your pitching parameter as a float. If the layer does not exist, create a layer that represents your aircraft's pitch for the instrument/HUD.
