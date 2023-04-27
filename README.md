@@ -189,7 +189,7 @@ The end result should have the pitch animation similar to this.
 
 #### Rolling
 
-![CanvasHUD - Rolling (3)](https://user-images.githubusercontent.com/19369963/234774075-39aeec69-9d77-44df-95c7-caeaabe572e8.png)
+![CanvasHUD - Rolling (4)](https://user-images.githubusercontent.com/19369963/234774283-8a7c6843-e45c-4d36-a3ba-7ea8c6c710f2.png)
 
 #### Heading
 
