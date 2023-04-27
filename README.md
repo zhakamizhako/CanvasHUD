@@ -161,6 +161,11 @@ Let's focus on the pitching. Make an animation that represents the aircraft when
 
 ![Blank diagram (5)](https://user-images.githubusercontent.com/19369963/234766539-b0d54860-be82-4aeb-bdb3-39752b36aeee.png)
 
+Your animation should look more like this:
+
+![ezgif-2-54b4390996](https://user-images.githubusercontent.com/19369963/234918237-1178af15-f8ce-4b0c-9980-16579e761fa8.gif)
+
+
 Once done, go to your Animation Controller. Create the parameter that represents your pitching parameter as a float. If the layer does not exist, create a layer that represents your aircraft's pitch for the instrument/HUD.
 
 ![image](https://user-images.githubusercontent.com/19369963/234723047-0f07fd5d-6cb8-4301-9dc0-003d7f8e27c1.png)
