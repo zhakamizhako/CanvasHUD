@@ -2,7 +2,7 @@
 
 #### For use with SaccFlight; For internal Saccflight, BLACK ACES staff, 425th VTFTW, YURU YURU AVIATION members, UHR and selected individuals only.
 
-#### Not to be redistributed unless permitted.
+#### Redistribution OK as long as credited.
 
 #### Discord: ZhakamiZhako#2147 | Twitter: [@ZZhako](https://twitter.com/ZZhako/) | zhintamizhakami@gmail.com
 
