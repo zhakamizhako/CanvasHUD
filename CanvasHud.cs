@@ -397,7 +397,7 @@ public class CanvasHud : UdonSharpBehaviour //Rename to GaugeScript
             CurrentVelocityIndicator = transform.InverseTransformDirection(EngineControl.VehicleRigidbody.velocity);
 
             gravity = 9.81f * Time.deltaTime;
-            Vector3 Gs3 = EngineControl.Gs3;
+            Vector3 Gs3 = EngineControl.Gs_all;
             SideG = Gs3.x / (gravity + Gs3.y);
 
             // VelocityVectorBefore = CurrentVelocityVector;
@@ -475,9 +475,9 @@ public class CanvasHud : UdonSharpBehaviour //Rename to GaugeScript
             if(VEL_I_Z!="") x.SetFloat(VEL_I_Z, (CurrentVelocityIndicator.z / velocityDivider) + .5f);
 
             //EngineControl.Gs3. Need to determine gravity + g's where gravity = 0.5f
-            if(Gs_X!="") x.SetFloat(Gs_X, (EngineControl.Gs3.x / Gs3Divider) + .5f);
-            if(Gs_Y!="") x.SetFloat(Gs_Y, (EngineControl.Gs3.y / Gs3Divider) + .5f);
-            if(Gs_Z!="") x.SetFloat(Gs_Z, (EngineControl.Gs3.z / Gs3Divider) + .5f);
+            if(Gs_X!="") x.SetFloat(Gs_X, (EngineControl.Gs_all.x / Gs3Divider) + .5f);
+            if(Gs_Y!="") x.SetFloat(Gs_Y, (EngineControl.Gs_all.y / Gs3Divider) + .5f);
+            if(Gs_Z!="") x.SetFloat(Gs_Z, (EngineControl.Gs_all.z / Gs3Divider) + .5f);
 
             if(Side_G!="")x.SetFloat(Side_G, Mathf.Lerp(x.GetFloat("SideG"), (SideG / gravity) + .5f, Time.deltaTime));
 
